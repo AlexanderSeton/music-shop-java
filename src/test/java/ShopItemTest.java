@@ -31,4 +31,9 @@ public class ShopItemTest {
     public void hasSellingPrice() {
         assertEquals(3000, shopItem.getSellingPrice(), 0.0);
     }
+
+    @Test
+    public void hasMarkup() {
+        assertEquals(50.0, shopItem.calculateMarkup(), 0.0);
+    }
 }

@@ -27,7 +27,7 @@ public class ShopItem implements ISell {
 
     public double calculateMarkup() {
         double profit = this.sellingPrice - this.boughtPrice;
-        double markup = (profit / this.sellingPrice) * 100;
+        double markup = (profit / this.boughtPrice) * 100;
         return markup;
     }
 }
