@@ -21,4 +21,16 @@ public class MusicShop {
     public void removeItem(ISell item) {
         this.stock.remove(item);
     }
+
+    public double totalPotentialAverageMarkup() {
+        double sum = 0;
+        ArrayList<Double> totalMarkups = new ArrayList<Double>();
+        for (int i=0; i<this.stock.size(); i++) {
+            double itemMarkup = this.stock.get(i).calculateMarkup();
+            totalMarkups.add(itemMarkup);
+            sum += itemMarkup;
+        }
+        double totalMarkup = sum / totalMarkups.size();
+        return totalMarkup;
+    }
 }

@@ -44,4 +44,10 @@ public class MusicShopTest {
         musicShop.removeItem(shopItem);
         assertEquals(0, musicShop.getStock().size());
     }
+
+    @Test
+    public void canCalculateTotalPotentialAverageMarkup() {
+        musicShop.addItem(shopItem2);
+        assertEquals(225, musicShop.totalPotentialAverageMarkup(), 0.0);
+    }
 }
